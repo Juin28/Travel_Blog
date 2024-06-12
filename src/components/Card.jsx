@@ -15,7 +15,7 @@ export default function Card (props) {
                             <span className="card--location-googleMaps"><a href={props.googleMapsUrl} className="card--location-googleMaps">View on Google Maps</a></span>
                         </div>
 
-                        <h3>Ratings: {props.rating}</h3>
+                        <h3 className="card--ratings">Ratings: {props.rating}</h3>
                     </div>
                     
                     <h2 className="card--spot">{props.title}</h2>

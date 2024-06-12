@@ -1,24 +1,16 @@
-:Card {
-    --font-color-light: #ffffff;
-    --font-color-dark: #1f1f1f;
-
-    --padding-left: 8px;
-}
-
-
+/* Laptop View (Default) */
 .card {
     display: flex;
     align-items: center;
     margin: 70px 120px;
-    
-}
-
-.card--top {
+  }
+  
+  .card--top {
     display: flex;
     justify-content: space-between;
-}
+  }
   
-.card--image {
+  .card--image {
     width: 250px;
     height: 300px;
     object-fit: cover;
@@ -26,73 +18,182 @@
     border-radius: 20px;
     transition-duration: 500ms;
     transition-timing-function: linear;
-}
-
-.card--image:hover {
+  }
+  
+  .card--image:hover {
     box-shadow: 0 0 30px rgba(45, 45, 45, 0.65);
     transition-duration: 400ms;
     transition-timing-function: linear;
-}
-
-.card--information {
+  }
+  
+  .card--information {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-}
-
-.card--location {
+  }
+  
+  .card--location {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0;
     padding: 0;
-}
-
-.card--location-icon {
+  }
+  
+  .card--location-icon {
     width: 40px;
     height: 40px;
-}
-
-.card--location-country {
+  }
+  
+  .card--location-country {
     margin-left: 5px;
     padding: 3px 15px;
     letter-spacing: 0.3rem;
     font-size: 18px;
-}
-
-.card--location-googleMaps {
+  }
+  
+  .card--location-googleMaps {
     padding: 5px;
     font-size: 12px;
     color: #626262;
     font-weight: 200;
-}
-
-.card--spot {
+  }
+  
+  .card--spot {
     margin-top: -10px;
     padding-left: var(--padding-left);
     font-size: 35px;
     font-weight: 750;
     filter: drop-shadow(5px 10px 6px rgba(162, 162, 162, 0.5));
-}
-
-.card--date {
+  }
+  
+  .card--date {
     padding-left: var(--padding-left);
     font-size: 16px;
     font-weight: 700;
-}
-
-.card--description {
+  }
+  
+  .card--description {
     margin-top: -10px;
     padding-left: var(--padding-left);
     font-size: 15px;
-}
-
-hr {
+  }
+  
+  hr {
     width: 83%;
     color: #ccc;
     border-style: solid;
     border-width: 1.3px 0 0 0;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-
+  }
+  
+  /* Mobile View */
+  @media (max-width: 767px) {
+    :Card {
+      --font-color-light: #ffffff;
+      --font-color-dark: #1f1f1f;
+      --padding-left: 8px;
+      --mobile-padding: 16px;
+      --mobile-image-height: 200px;
+    }
+  
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 70px 50px;
+    }
+  
+    .card--top {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .card--image {
+      width: 100%;
+      height: var(--mobile-image-height);
+      object-fit: cover;
+      margin-right: 0;
+      border-radius: 10px;
+      transition-duration: 500ms;
+      transition-timing-function: linear;
+    }
+  
+    .card--image:hover {
+      box-shadow: 0 0 30px rgba(45, 45, 45, 0.65);
+      transition-duration: 400ms;
+      transition-timing-function: linear;
+    }
+  
+    .card--information {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 100%;
+      padding: var(--mobile-padding);
+    }
+  
+    .card--location {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      margin-bottom: -30px;
+    }
+  
+    .card--location-icon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .card--location-country {
+      margin-left: 5px;
+      padding: 3px 15px;
+      letter-spacing: 0.3rem;
+      font-size: 16px;
+    }
+  
+    .card--location-googleMaps {
+      padding: 5px;
+      font-size: 10px;
+      color: #626262;
+      font-weight: 200;
+    }
+  
+    .card--ratings {
+      margin: 10px;
+    }
+  
+    .card--spot {
+      margin-top: 5px;
+      margin-bottom: -8px;
+      padding-left: var(--padding-left);
+      font-size: 28px;
+      font-weight: 750;
+      filter: drop-shadow(5px 10px 6px rgba(162, 162, 162, 0.5));
+    }
+  
+    .card--date {
+      padding-left: var(--padding-left);
+      font-size: 14px;
+      font-weight: 700;
+    }
+  
+    .card--description {
+      margin-top: -10px;
+      padding-left: var(--padding-left);
+      font-size: 13px;
+    }
+  
+    hr {
+      width: 100%;
+      color: #ccc;
+      border-style: solid;
+      border-width: 1.3px 0 0 0;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
